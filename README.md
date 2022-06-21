@@ -40,11 +40,21 @@ nhận dạng ngữ pháp liên quan đến hiện tại và có thể sẽ bắ
  kết quả đúng nhất.
 
 Các vấn đề gặp phải trong quá trình thực hiện
-	- Phần xử lý ban đầu bọn em muốn làm 1 thanh tìm kiếm như google nhưng gặp khó khăn 
+	- Phần xử lý ban đầu bọn em muốn làm 1 thanh tìm kiếm như google nhưng gặp khó khăn trong việc phần xử lý tiếng việt , dôi lúc nó trả kết qủa đúng nhưng đôi khi nó lại trả kết quả sai 
+muốn được kết quả đúng phải nói rõ từng chữ , từng dấu câu việc này có thể cho người dùng việc không thoải mái khi sử dụng 
 
 Kết quả, kết luận
+Video minh họa kết quả có tại đây.
+
+Dựa vào kết quả từ thực tế, nhóm em rút ra nhận xét như sau:
+- Độ chính xác của web chỉ lên đến 80-90 phần trăm. tỉ lệ này biến độ nhiều theo độ yên tĩnh và độ nhiễu của môi trường xung quanh . và có thể gặp khó khăn khi xử lý văn bản khi mình có thể 
+phát âm sai và không chuẩn theo ngữ pháp và còn phải click chuột theo sự kiện được giao ra  để giao tiếp.
+- Web này  chưa hề có gì là thông minh. Thực tế thì bọn em cố làm cho web này có thể nhận biết được ngôn ngữ tiếng việt nhưng con web này vẫn chuộng tiếng anh hơn là tiếng việt mặc dù không hiểu 
+tại sao 
 
 Lưu ý cài đặt
+
+Sử dụng HTML , CSS, JS, Python và thư viện flask
 
 
 
