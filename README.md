@@ -45,6 +45,9 @@ muốn được kết quả đúng phải nói rõ từng chữ , từng dấu c
 
 Kết quả, kết luận
 Video minh họa kết quả có tại đây.
+https://drive.google.com/file/d/1em5XDe4aAtGPjKtaXzJ43HYP6_xrICnL/view?usp=sharing
+
+https://drive.google.com/file/d/1T284Okm9qVOGsNnTL4e-wHiMAq9C0F3l/view?usp=sharing
 
 Dựa vào kết quả từ thực tế, nhóm em rút ra nhận xét như sau:
 - Độ chính xác của web chỉ lên đến 80-90 phần trăm. tỉ lệ này biến độ nhiều theo độ yên tĩnh và độ nhiễu của môi trường xung quanh . và có thể gặp khó khăn khi xử lý văn bản khi mình có thể 
