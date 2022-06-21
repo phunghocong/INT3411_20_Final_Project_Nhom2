@@ -5,15 +5,15 @@ Nhóm 2 : Hồ Công Phùng
 	Đoàn Đình AN 
 
 
-Mô tả chung về App :
+Mô tả chung về App : App dùng để trợ giúp người dùng đánh văn bản
 
 Tổng quan : 
 
 Web của bọn em là web dùng để nhận biết giọng nói của người truyền vào , khi người nói thì web sẽ nhận biết được và sẽ trả ra 1 đoạn văn bản tương ứng với câu nói mà web được nhận 
 
-Web gồm 2 phần xử lý đó là phần xử lý khi truyền giọng nói vào và phần xử lý xuất ra đoạn văn bản . Ở đây bọn em chọn ngôn ngữ tiếng anh để có thể phù hợp hơn với người dùng và khi sử dụng 
-Tiếng anh thì đoạn văn bản xuất ra sẽ không gặp vấn đề dấu câu như tiếng việt.  Báo cáo này sẽ tập trung nhiều đến phần điều khiển ghi âm và xuất văn bản , cụ thể là mô 
-hình nhận diện được sử dụng.
+Web gồm 2 phần xử lý đó là phần xử lý khi truyền giọng nói vào và phần xử lý xuất ra đoạn văn bản . Ở đây bọn em chọn ngôn ngữ tiếng anh và tiếng việt để có thể gia tăng số lượng người dùng hơn
+
+ Báo cáo này sẽ tập trung nhiều đến phần điều khiển ghi âm và xuất văn bản , cụ thể là mô hình nhận diện được sử dụng.
 
 Dựa trên thời gian đã test khi qua sử dụng , nhóm xác định độ trễ để web xử lý phần ghi âm đến khi cho ra kết quả là đoạn văn bản là khoảng 0,202s. Trong thời gian xử lý , trích xuất đặc 
 trưng mất tầm 0,14s. Đây là độ trễ nhóm đã cố gắng giảm được.
@@ -24,7 +24,7 @@ Mô hình nhận diện
 Nhóm đã tiến hành  sử dụng thư viện speechRecognition để nhận dạng người dùng. Một thư viện được cho sẵn và đã được các nhà phát triển sử dụng ngôn ngữ Python kết hợp với ngôn ngữ Javascript 
 phát triển.Giao diện SpeechRecognition của Web Speech API là giao diện bộ điều khiển cho dịch vụ nhận dạng; điều này cũng xử lý SpeechRecognitionEvent được gửi từ dịch vụ nhận dạng.
 
-dùng hàm có sẵ webkitSpeechRecognition() để có thể nhận dạng được người dùng web và bọn em sử dùng SpeechRecognition.lang để có thể set được ngôn ngữ mà người máy có thể nhận diện được 
+dùng hàm có sẵn webkitSpeechRecognition() để có thể nhận dạng được người dùng web và bọn em sử dùng SpeechRecognition.lang để có thể set được ngôn ngữ mà người máy có thể nhận diện được 
 
 Tiếp tục sử dụng biến có sẵn của hàm SpeechRecognition.continuous để có thể giới hạn thời gian dành cho người nói , khi mà web nhận biết được người dùng không nói nữa hoặc chấm được 1 câu 
 thì web sẽ tắt chế độ tìm kiếm bằng giọng nói.
@@ -40,7 +40,7 @@ nhận dạng ngữ pháp liên quan đến hiện tại và có thể sẽ bắ
  kết quả đúng nhất.
 
 Các vấn đề gặp phải trong quá trình thực hiện
-
+	- Phần xử lý ban đầu bọn em muốn làm 1 thanh tìm kiếm như google nhưng gặp khó khăn 
 
 Kết quả, kết luận
 

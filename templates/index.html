@@ -1,57 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style.css') }}"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-<style>
-    .view{
-        margin-top: 50000px;
-        margin: auto;
-        width: 60%;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f2f2f2;
+  </head>
+  <style>
+    .view {
+      margin-top: 50000px;
+      margin: auto;
+      width: 60%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f2f2f2;
     }
-    #textInput{
-        width: 90%;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+    #textInput {
+      width: 90%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
-</style>
-<body>
+  </style>
+  <body>
     <div class="view">
-        <input type="textarea" name="text" id="textInput" value="" placeholder="Your say...">
-        <button class="msger-mic-btn"><img src="{{ url_for('static', filename='styles/icons8-microphone-30.png') }}" alt="" srcset="" class="image-mic" ></button>
+      <input
+        type="textarea"
+        name="text"
+        id="textInput"
+        value=""
+        placeholder="Your say..."
+      />
+      <button class="msger-mic-btn">
+        <img
+          src="{{ url_for('static', filename='styles/icons8-microphone-30.png') }}"
+          alt=""
+          srcset=""
+          class="image-mic"
+        />
+      </button>
     </div>
-        
-    <script>
-        const msger_mic_btn = document.querySelector('.msger-mic-btn');
-        const reg= new webkitSpeechRecognition();  // sử dụng thư viện speechRecognition để nhận dạng người dùng
-        console.log("xin chao the gioi")
-        reg.lang='en-US';// ngôn ngữ nhận dạng đặt là tiếng anh
-        reg.interimResults=false;
-        reg.continuous=false;// giới hạn thời gian nhận dạng giọng nói, xong là tắt
-        reg.maxAlternatives=1;
 
-        msger_mic_btn.addEventListener('click',()=>{
-            reg.stop();// dừng phiên nhận dạng trước
-            reg.start();// bắt đầu phiên nhận dạng mới
-            reg.onresult=(event)=>{
-                let text=event.results[0][0].transcript;// lấy kết quả nhận dạng 
-                document.getElementById('textInput').value=text;// gán kết quả vào textInput
-                document.getElementById('textInput').focus();// focus vào textInput
-                document.getElementById('textInput').select();// chọn tất cả textInput
-                console.log(text);
-            }
-        });
+    <script>
+      const msger_mic_btn = document.querySelector(".msger-mic-btn");
+      const reg = new webkitSpeechRecognition(); // sử dụng thư viện speechRecognition để nhận dạng người dùng
+      console.log("xin chao the gioi");
+      reg.lang = "en-US";
+      reg.lang = "”vi-VI”"; // ngôn ngữ nhận dạng đặt là tiếng anh
+      reg.interimResults = false;
+      reg.continuous = false; // giới hạn thời gian nhận dạng giọng nói, xong là tắt
+      reg.maxAlternatives = 1;
+
+      msger_mic_btn.addEventListener("click", () => {
+        reg.stop(); // dừng phiên nhận dạng trước
+        reg.start(); // bắt đầu phiên nhận dạng mới
+        reg.onresult = (event) => {
+          let text = event.results[0][0].transcript; // lấy kết quả nhận dạng
+          document.getElementById("textInput").value = text; // gán kết quả vào textInput
+          document.getElementById("textInput").focus(); // focus vào textInput
+          document.getElementById("textInput").select(); // chọn tất cả textInput
+          console.log(text);
+        };
+      });
     </script>
-</body>
+  </body>
 </html>
