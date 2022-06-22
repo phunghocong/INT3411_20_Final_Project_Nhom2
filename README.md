@@ -32,6 +32,13 @@ thì web sẽ tắt chế độ tìm kiếm bằng giọng nói.
 SpeechRecognition.interimResults là dùng để Kiểm soát xem có nên trả về kết quả tạm thời (đúng) hay không (sai.) Kết quả tạm thời là kết quả chưa phải là cuối cùng vì khi người dùng phát âm 
 không đúng tiếng anh hoặc dùng 1 ngôn ngữ khác ngôn ngữ tiếng anh thì web vẫn sẽ trả ra kết quả nhưng đó sẽ là kết quả tạm thời. 
 
+Các thuật toán được sử dụng trong dạng công nghệ này bao gồm các tính năng PLP, tìm kiếm Viterbi, mạng nơ-ron sâu, đào tạo về phân biệt, 
+khuôn khổ WFST, v.v. Nếu bạn quan tâm đến các phát minh mới của Google, hãy tiếp tục kiểm tra các ấn phẩm gần đây của họ về giọng nói. 
+
+Kỹ thuật dự đoán tuyến tính theo cảm nhận (PLP) kết hợp các dải tần quan trọng, nén cường độ thành âm lượng và nhấn mạnh âm lượng bằng nhau 
+trong việc trích xuất thông tin liên quan từ giọng nói.
+
+
 Bộ nhận diện giọng nói 
 
 Bọn em phát triển web dựa trên giao diện tìm kiếm giọng nói của google sẽ có 1 thanh tìm kiếm và 1 cái mic để nhận diện giọng nói của người dùng. Ở phần mic thì bọn em gán sự kiện click để
