@@ -30,24 +30,52 @@
     }
   </style>
   <body>
-    <div class="view">
-      <input
-        type="textarea"
-        name="text"
-        id="textInput"
-        value=""
-        placeholder="Your say..."
-      />
-      <button class="msger-mic-btn">
-        <img
-          src="{{ url_for('static', filename='styles/icons8-microphone-30.png') }}"
-          alt=""
-          srcset=""
-          class="image-mic"
-        />
-      </button>
-    </div>
-
+    <div class="container">
+      <div class="header">
+          
+      </div>
+      <div class="container1">
+          <!-- <div class="menu">
+              <div class="menu1"></div>
+              <div class="menu1"></div>
+              <div class="menu1"></div>
+              <div class="menu1"></div>
+              <div class="menu1"></div>
+          </div> -->
+          <div class="form">
+              <h1>Hỗ trợ đánh văn bản Word</h1>
+              <div class="option">
+                  <button class="option1" onclick="indam()">In đậm</button>
+                  <button class="option1" onclick="innghieng()">In nghiêng</button>
+                  <button class="option1" onclick="Gachchan()">Gạch chân</button>
+                  <button class="option1" onclick="chuthuong()">Chữ thường</button>
+              </div>
+              <!-- <input type="textarea" name="text" id="demo" class="input" value="" placeholder="Your say..."> -->
+              <input
+              class="input"
+              type="textarea"
+              name="text"
+              id="textInput"
+              value=""
+              placeholder="Your say..."
+              
+            />              
+            <div class="sub-form" style="margin-top:20px">
+                  <input class="input2" placeholder="Text" style="height:100px">
+              </div>
+              <button class="msger-mic-btn">
+                <img
+                  src="{{ url_for('static', filename='styles/icons8-microphone-30.png') }}"
+                  alt=""
+                  srcset=""
+                  class="image-mic"
+                />
+              </button>              
+              <button class="picture">Export to Word</button>
+          </div>
+      </div>
+      
+  </div>
     <script>
       const msger_mic_btn = document.querySelector(".msger-mic-btn");
       const reg = new webkitSpeechRecognition(); // sử dụng thư viện speechRecognition để nhận dạng người dùng
@@ -69,6 +97,25 @@
           console.log(text);
         };
       });
+      function indam() {
+        document.getElementById("textInput").style.fontWeight= '900';
+        console.log("indam");
+    }
+    function innghieng() {
+        document.getElementById("textInput").style.fontStyle= 'italic';
+        console.log(innghieng);
+    }
+    function Gachchan() {
+        document.getElementById("textInput").style.textDecoration= 'underline';
+        console.log(gachchan);
+    }
+    function chuthuong() {
+        document.getElementById("textInput").style.fontSize= '11';
+        document.getElementById("textInput").style.textDecoration= 'none';
+        document.getElementById("textInput").style.fontStyle= 'normal';
+        document.getElementById("textInput").style.fontWeight= '300';
+        console.log("chuthuong");
+    }
     </script>
   </body>
 </html>
